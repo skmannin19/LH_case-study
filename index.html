@@ -2035,161 +2035,341 @@
               </span>
             </div>
 
-            <!-- 3 Visual Chart Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <!-- 5 Individual Quarterly Metric Tracking Charts -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
               
-              <!-- Chart 1: Accounts Researched / Day & Call Volume -->
-              <div class="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-4">
+              <!-- Chart 1: Accounts Researched / Day -->
+              <div class="p-4 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-3 shadow-2xs">
                 <div>
                   <div class="flex items-center justify-between text-xs mb-1">
-                    <span class="font-bold text-[#0d5c63] uppercase text-[11px]">Chart 1 · Research & Dials</span>
-                    <span class="text-emerald-700 font-bold">+146% WoW Ramp</span>
+                    <span class="font-bold text-[#0d5c63] uppercase text-[10px]">Chart 1 · Research</span>
+                    <span class="text-emerald-700 font-bold text-[11px]">+146% Wk 6</span>
                   </div>
-                  <h4 class="text-sm font-bold text-[#0f172a]">Accounts Researched/Day & Weekly Dials</h4>
-                  <p class="text-xs text-slate-500 mb-3">Progression from 4/day baseline through full 150-rep adoption.</p>
+                  <h4 class="text-xs font-extrabold text-[#0f172a]">Accounts Researched / Day</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Daily research velocity per seller.</p>
 
-                  <!-- Visual WoW Bar Progression -->
-                  <div class="space-y-2.5 text-xs">
+                  <div class="space-y-2 text-xs">
                     <div>
-                      <div class="flex justify-between text-[11px] mb-1">
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Baseline</span>
+                        <span class="font-bold text-slate-700">4.0 / day</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-slate-400 h-full rounded-full" style="width: 34%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 5 (Wave 1)</span>
+                        <span class="font-bold text-[#0d5c63]">6.8 / day</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 58%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 6 (150 Live)</span>
+                        <span class="font-bold text-[#f2994a]">9.85 / day</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 83%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 10 (Ramp)</span>
+                        <span class="font-bold text-[#0d5c63]">11.2 / day</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 95%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Quarter End (Wk 12)</span>
+                        <span class="font-bold text-emerald-700">11.8 / day</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-200 leading-snug">
+                  <strong>Takeaway:</strong> Briefs eliminate 20m/acct, driving 11.8 accounts/day trajectory (+195% quarterly).
+                </p>
+              </div>
+
+              <!-- Chart 2: Outbound Calls / Week -->
+              <div class="p-4 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-3 shadow-2xs">
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="font-bold text-[#0d5c63] uppercase text-[10px]">Chart 2 · Phone Lift</span>
+                    <span class="text-emerald-700 font-bold text-[11px]">+610% Wk 6</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-[#0f172a]">Outbound Dials / Week</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Weekly dials via 1-click calling.</p>
+
+                  <div class="space-y-2 text-xs">
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Baseline</span>
+                        <span class="font-bold text-slate-700">120 dials</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-slate-400 h-full rounded-full" style="width: 9%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 5 (Wave 1)</span>
+                        <span class="font-bold text-[#0d5c63]">410 dials</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 32%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 6 (150 Live)</span>
+                        <span class="font-bold text-[#f2994a]">852 dials</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 66%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 10 (Ramp)</span>
+                        <span class="font-bold text-[#0d5c63]">1,180 dials</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 91%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Quarter End (Wk 12)</span>
+                        <span class="font-bold text-emerald-700">1,290 dials</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-200 leading-snug">
+                  <strong>Takeaway:</strong> Phone outreach surged 7.1x at launch, targeting 1,290 dials/wk by quarter end.
+                </p>
+              </div>
+
+              <!-- Chart 3: Email Reply Rate (%) -->
+              <div class="p-4 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-3 shadow-2xs">
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="font-bold text-[#0d5c63] uppercase text-[10px]">Chart 3 · Reply Rate</span>
+                    <span class="text-emerald-700 font-bold text-[11px]">+148% Wk 6</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-[#0f172a]">Email Reply Rate (%)</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Comparing signal outreach to baseline.</p>
+
+                  <div class="space-y-2 text-xs">
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Outbound Baseline</span>
+                        <span class="font-bold text-slate-700">3.0%</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-slate-400 h-full rounded-full" style="width: 36%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 5 (Wave 1)</span>
+                        <span class="font-bold text-[#0d5c63]">6.1%</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 73%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 6 (150 Live)</span>
+                        <span class="font-bold text-[#f2994a]">7.45% (19/255)</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 89%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 10 (Ramp)</span>
+                        <span class="font-bold text-[#0d5c63]">8.2%</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 98%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Quarter End (Wk 12)</span>
+                        <span class="font-bold text-emerald-700">8.4%</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-200 leading-snug">
+                  <strong>Takeaway:</strong> Reply rate held steady above 7.4% as native German/French templates eliminated friction.
+                </p>
+              </div>
+
+              <!-- Chart 4: Cumulative Meetings Booked -->
+              <div class="p-4 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-3 shadow-2xs">
+                <div>
+                  <div class="flex items-center justify-between text-xs mb-1">
+                    <span class="font-bold text-[#0d5c63] uppercase text-[10px]">Chart 4 · Conversion</span>
+                    <span class="text-emerald-700 font-bold text-[11px]">68 Mtgs Wk 6</span>
+                  </div>
+                  <h4 class="text-xs font-extrabold text-[#0f172a]">Cumulative Meetings Booked</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Qualified meetings booked across all cohorts.</p>
+
+                  <div class="space-y-2 text-xs">
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
                         <span class="text-slate-600 font-medium">Baseline (Pre-Launch)</span>
-                        <span class="font-bold text-slate-700">4.0 / day · 120 calls</span>
+                        <span class="font-bold text-slate-400">Untracked</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-                        <div class="bg-slate-400 h-full rounded-full" style="width: 35%"></div>
-                      </div>
-                    </div>
-
-                    <div>
-                      <div class="flex justify-between text-[11px] mb-1">
-                        <span class="text-slate-600 font-medium">Week 5 (Wave 1 Rollout)</span>
-                        <span class="font-bold text-[#0d5c63]">6.8 / day · 410 calls</span>
-                      </div>
-                      <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 60%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-slate-300 h-full rounded-full" style="width: 5%"></div>
                       </div>
                     </div>
 
                     <div>
-                      <div class="flex justify-between text-[11px] mb-1">
-                        <span class="text-slate-600 font-medium">Week 6 (Wave 2 Global Launch)</span>
-                        <span class="font-bold text-[#f2994a]">9.85 / day · 852 calls</span>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 5 (Wave 1)</span>
+                        <span class="font-bold text-[#0d5c63]">28 mtgs</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 85%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 16%"></div>
                       </div>
                     </div>
 
                     <div>
-                      <div class="flex justify-between text-[11px] mb-1">
-                        <span class="text-slate-600 font-medium">Week 10 (Post-Launch Stabilization)</span>
-                        <span class="font-bold text-[#0d5c63]">11.2 / day · 1,180 calls</span>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 6 (150 Live)</span>
+                        <span class="font-bold text-[#f2994a]">68 mtgs</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-3 rounded-full overflow-hidden">
-                        <div class="bg-emerald-600 h-full rounded-full" style="width: 95%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 38%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 10 (Ramp)</span>
+                        <span class="font-bold text-[#0d5c63]">142 mtgs</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 79%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Quarter End (Wk 12)</span>
+                        <span class="font-bold text-emerald-700">180 mtgs</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <p class="text-[11px] text-slate-500 pt-2 border-t border-slate-200">
-                  <strong>Takeaway:</strong> 1-click dials and 60-second briefs sustained a 2.8x increase in overall outbound activity.
+                <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-200 leading-snug">
+                  <strong>Takeaway:</strong> 68 meetings booked by Week 6 launch, compounding toward 180 total quarter target.
                 </p>
               </div>
 
-              <!-- Chart 2: Email Reply Rate Curve vs Manual -->
-              <div class="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-4">
+              <!-- Chart 5: Pipeline Generated ($) -->
+              <div class="p-4 rounded-2xl bg-orange-50/40 border-2 border-[#f2994a]/60 flex flex-col justify-between space-y-3 shadow-2xs">
                 <div>
                   <div class="flex items-center justify-between text-xs mb-1">
-                    <span class="font-bold text-[#0d5c63] uppercase text-[11px]">Chart 2 · Conversion Quality</span>
-                    <span class="text-emerald-700 font-bold">+148% Reply Lift</span>
+                    <span class="font-bold text-[#ea580c] uppercase text-[10px]">Chart 5 · Pipeline</span>
+                    <span class="text-[#ea580c] font-black text-[11px]">K Wk 6</span>
                   </div>
-                  <h4 class="text-sm font-bold text-[#0f172a]">Email Reply Rate % vs. 3.0% Baseline</h4>
-                  <p class="text-xs text-slate-500 mb-3">Comparing signal-based outreach to legacy manual outbound.</p>
+                  <h4 class="text-xs font-extrabold text-[#ea580c]">Pipeline Generated ($)</h4>
+                  <p class="text-[11px] text-slate-500 mb-3">Qualified opportunity value created.</p>
 
-                  <div class="space-y-3 text-xs pt-1">
-                    <div class="p-2.5 rounded-xl bg-white border border-slate-200">
-                      <div class="flex justify-between font-bold mb-1">
-                        <span class="text-slate-700">Manual Outbound Baseline</span>
-                        <span class="text-slate-500">3.0%</span>
+                  <div class="space-y-2 text-xs">
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Baseline (Pre-Launch)</span>
+                        <span class="font-bold text-slate-400">Untracked</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-slate-400 h-full rounded-full" style="width: 30%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-slate-300 h-full rounded-full" style="width: 5%"></div>
                       </div>
                     </div>
 
-                    <div class="p-2.5 rounded-xl bg-white border border-[#bbf7d0]">
-                      <div class="flex justify-between font-bold mb-1">
-                        <span class="text-[#0d5c63]">Week 6 Global Rollout</span>
-                        <span class="text-[#0d5c63]">7.45% (19/255)</span>
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 5 (Wave 1)</span>
+                        <span class="font-bold text-[#0d5c63]">K</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 74.5%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 9%"></div>
                       </div>
                     </div>
 
-                    <div class="p-2.5 rounded-xl bg-white border border-orange-200">
-                      <div class="flex justify-between font-bold mb-1">
-                        <span class="text-[#ea580c]">Quarterly Target (Wk 12)</span>
-                        <span class="text-[#ea580c]">8.4% (Projected)</span>
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 6 (150 Live)</span>
+                        <span class="font-bold text-[#ea580c]">K</span>
                       </div>
-                      <div class="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 84%"></div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#f2994a] h-full rounded-full" style="width: 33%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Week 10 (Ramp)</span>
+                        <span class="font-bold text-[#0d5c63]">.42M</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-[#0d5c63] h-full rounded-full" style="width: 77%"></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] mb-0.5">
+                        <span class="text-slate-600 font-medium">Quarter End (Wk 12)</span>
+                        <span class="font-bold text-[#ea580c]">.85M</span>
+                      </div>
+                      <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
+                        <div class="bg-emerald-600 h-full rounded-full" style="width: 100%"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <p class="text-[11px] text-slate-500 pt-2 border-t border-slate-200">
-                  <strong>Takeaway:</strong> Reply rates doubled and held steady as localized templates removed English draft friction.
-                </p>
-              </div>
-
-              <!-- Chart 3: Meetings Booked & Pipeline Generated ($) -->
-              <div class="p-5 rounded-2xl bg-[#f8fafc] border border-[#e2e8f0] flex flex-col justify-between space-y-4">
-                <div>
-                  <div class="flex items-center justify-between text-xs mb-1">
-                    <span class="font-bold text-[#ea580c] uppercase text-[11px]">Chart 3 · Revenue Impact</span>
-                    <span class="text-[#ea580c] font-bold">$1.85M Run-Rate</span>
-                  </div>
-                  <h4 class="text-sm font-bold text-[#0f172a]">Meetings Booked & Pipeline Generated ($)</h4>
-                  <p class="text-xs text-slate-500 mb-3">Translating pilot signals into commercial revenue pipeline.</p>
-
-                  <div class="space-y-2.5 text-xs">
-                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-slate-200">
-                      <div>
-                        <span class="text-slate-500 block text-[10px] uppercase font-bold">Week 5 (Wave 1)</span>
-                        <strong class="text-sm font-black text-[#0f172a]">28 Mtgs</strong>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-slate-500 block text-[10px] uppercase font-bold">Pipeline Value</span>
-                        <strong class="text-sm font-black text-[#0d5c63]">$172,000</strong>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-white border border-[#bbf7d0]">
-                      <div>
-                        <span class="text-emerald-700 block text-[10px] uppercase font-bold">Week 6 (150 Live)</span>
-                        <strong class="text-sm font-black text-[#0f172a]">68 Mtgs</strong>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-emerald-700 block text-[10px] uppercase font-bold">Pipeline Value</span>
-                        <strong class="text-sm font-black text-emerald-700">$618,000</strong>
-                      </div>
-                    </div>
-
-                    <div class="flex items-center justify-between p-2.5 rounded-xl bg-orange-50 border border-orange-200">
-                      <div>
-                        <span class="text-[#ea580c] block text-[10px] uppercase font-bold">Quarter End (Wk 12)</span>
-                        <strong class="text-sm font-black text-[#0f172a]">180 Mtgs</strong>
-                      </div>
-                      <div class="text-right">
-                        <span class="text-[#ea580c] block text-[10px] uppercase font-bold">Quarterly Pipeline</span>
-                        <strong class="text-sm font-black text-[#ea580c]">$1,850,000</strong>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <p class="text-[11px] text-slate-500 pt-2 border-t border-slate-200">
-                  <strong>Takeaway:</strong> Pipeline generated scales directly with meeting volume, averaging $41.2K per active seller monthly.
+                <p class="text-[10px] text-slate-500 pt-2 border-t border-slate-200 leading-snug">
+                  <strong>Takeaway:</strong> Reached K at full launch (.2K/seller monthly), ramping to .85M quarterly pipeline.
                 </p>
               </div>
 
