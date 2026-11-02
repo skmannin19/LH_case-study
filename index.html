@@ -187,6 +187,7 @@
       #view-deck,
       #view-announcement,
       #view-exec,
+      #view-coaching,
       #view-manager-intro,
       #manager-survey-tool {
         display: none !important;
@@ -387,6 +388,10 @@
       <button onclick="switchMainTab('exec')" id="tab-btn-exec" class="tab-pill-inactive px-5 py-2.5 text-sm transition-all flex items-center space-x-2 whitespace-nowrap cursor-pointer">
         <i class="fa-solid fa-chart-line text-xs"></i>
         <span>4. Weekly Exec Summary & Dashboard</span>
+      </button>
+      <button onclick="switchMainTab('coaching')" id="tab-btn-coaching" class="tab-pill-inactive px-5 py-2.5 text-sm transition-all flex items-center space-x-2 whitespace-nowrap cursor-pointer">
+        <i class="fa-solid fa-users-gear text-xs"></i>
+        <span>5. Performance Coaching</span>
       </button>
     </nav>
   </header>
@@ -2001,7 +2006,7 @@
           </div>
         </div>
       </div>
-    </section></section>
+    </section>
 
     <!-- ===================================================================== -->
     <!-- VIEW 4: BI-WEEKLY EXECUTIVE SUMMARY & PIPELINE DASHBOARD              -->
@@ -2672,7 +2677,1200 @@
         </div>
       </div>
 
-    </section></section>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- VIEW 5: PERFORMANCE COACHING (POWER HOURS & CROSS-FUNCTIONAL SYNC)     -->
+    <!-- ===================================================================== -->
+    <section id="view-coaching" class="hidden space-y-8">
+
+      <!-- Top Header Card -->
+      <div class="brand-card p-6 sm:p-8 space-y-4 border-t-4 border-t-[#1a365d]">
+        
+        <!-- Tag label extending across the tile in a single row -->
+        <div class="w-full">
+          <span class="inline-block px-3.5 py-1.5 rounded-full bg-[#f2994a]/15 text-[#ea580c] text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-2xs">
+            Deliverable 05 · Critical Change Management & Performance Coaching Layer
+          </span>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-5 pt-1">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1a365d] tracking-tight">
+              Performance Coaching: Weekly "Power Hours" & Cross-Functional Alignment
+            </h2>
+            <p class="body-brand mt-1.5 max-w-4xl text-sm sm:text-[15.5px] text-[#334155]">
+              A continuous behavioral reinforcement engine combining frontline manager-led tactical co-working execution sprints with bi-weekly executive & product roadmap triage to eliminate seller friction and sustain high adoption.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-2.5 flex-shrink-0">
+            <span class="px-3 py-1.5 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] text-xs font-bold text-[#1a365d] shadow-2xs flex items-center gap-1.5 whitespace-nowrap">
+              <i class="fa-solid fa-stopwatch text-[#f2994a]"></i> 3 × 15m Pomodoro Sprints
+            </span>
+            <span class="px-3 py-1.5 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] text-xs font-bold text-[#1a365d] shadow-2xs flex items-center gap-1.5 whitespace-nowrap">
+              <i class="fa-solid fa-people-arrows text-[#0d5c63]"></i> High/Low Peer Pairing
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SHORT 2-POINT TABLE OF CONTENTS & QUICK JUMP BAR -->
+      <div class="brand-card p-4 sm:p-5 bg-white border border-[#eceae4] rounded-2xl shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="flex items-center space-x-3">
+          <span class="w-8 h-8 rounded-xl bg-[#1a365d] text-white flex items-center justify-center text-xs font-bold shadow-2xs">
+            <i class="fa-solid fa-list-ol"></i>
+          </span>
+          <div>
+            <span class="text-[11px] font-black uppercase tracking-wider text-[#ea580c] block">Tab Architecture</span>
+            <h4 class="text-xs sm:text-sm font-extrabold text-[#1a365d]">Table of Contents · Performance Coaching</h4>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5">
+          <!-- Item 1: Power Hour Jump -->
+          <button onclick="scrollToCoachingSection('section-power-hour')" class="px-3.5 py-2 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] hover:border-[#1a365d] hover:bg-white text-xs font-bold text-[#1a365d] transition shadow-2xs flex items-center gap-2 cursor-pointer">
+            <span class="w-5 h-5 rounded-full bg-[#1a365d]/10 text-[#1a365d] flex items-center justify-center text-[10px] font-black">1</span>
+            <span>Performance Coaching Power Hour</span>
+            <i class="fa-solid fa-arrow-down text-[10px] text-slate-400"></i>
+          </button>
+
+          <!-- Item 2: Bi-Weekly Adoption Sync Jump (Quick Jump Button) -->
+          <button onclick="scrollToCoachingSection('section-adoption-sync')" class="px-4 py-2 rounded-xl bg-[#0d5c63] hover:bg-[#094348] text-white text-xs font-bold transition shadow-2xs flex items-center gap-2 cursor-pointer hover:shadow-md">
+            <span class="w-5 h-5 rounded-full bg-white/20 text-white flex items-center justify-center text-[10px] font-black">2</span>
+            <span>Bi-Weekly Cross-Functional Adoption Sync</span>
+            <i class="fa-solid fa-arrow-down text-[10px] text-[#f2994a]"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 1. WEEKLY "POWER HOUR" PLAYBOOK CARD (FRONTLINE SOP)                   -->
+      <!-- ===================================================================== -->
+      <div id="section-power-hour" class="brand-card p-6 sm:p-8 space-y-7 bg-white border border-[#eceae4] rounded-2xl shadow-sm scroll-mt-6">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-4 border-b border-[#e2e8f0] gap-3">
+          <div>
+            <span class="text-xs font-black uppercase tracking-widest text-[#0d5c63] flex items-center gap-1.5">
+              <i class="fa-solid fa-bolt-lightning text-[#f2994a]"></i> Frontline Manager Standard Operating Procedure (SOP)
+            </span>
+            <h3 class="text-lg sm:text-xl font-extrabold text-[#1a365d] mt-0.5">
+              Weekly "Power Hour" Execution Playbook (60 Min Mandatory Block)
+            </h3>
+            <p class="text-xs sm:text-sm text-[#475569] mt-0.5">
+              Mandatory weekly co-working block co-hosted by Frontline Manager (sales strategy) & GTM Specialist (real-time workflow support).
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+            <span class="px-3 py-1 rounded-xl bg-[#f8fafc] border border-[#cbd5e1] text-xs font-bold text-slate-700 shadow-2xs">
+              Cadence: Weekly (60 Min)
+            </span>
+            <span class="px-3 py-1 rounded-xl bg-orange-50 border border-orange-200 text-xs font-bold text-[#ea580c] shadow-2xs">
+              Mandatory per Team (8-12 Reps)
+            </span>
+          </div>
+        </div>
+
+        <!-- Concept & Dual Co-Hosting Structure -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+          
+          <!-- Concept Overview (4 Cols) -->
+          <div class="lg:col-span-4 p-5 rounded-2xl bg-[#f8f9fa] border border-[#e2e8f0] flex flex-col justify-between space-y-3">
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-[#ea580c] block">
+                The Core Co-Working Concept
+              </span>
+              <h4 class="text-sm font-extrabold text-[#1a365d] mt-1">
+                Structured Live Execution Over Passive Lectures
+              </h4>
+              <p class="text-xs text-[#334155] leading-relaxed mt-2">
+                Instead of another weekly slide deck, the Power Hour is an active, fast-paced execution lab where reps sit in high-focus co-working while two dedicated co-hosts clear roadblocks instantly.
+              </p>
+            </div>
+            <div class="p-3 rounded-xl bg-white border border-[#e2e8f0] text-[11px] text-[#475569] space-y-1">
+              <strong class="text-[#1a365d] block">Primary Outcome:</strong>
+              Reps experience real-time conversion momentum, habituate 60-sec brief generation, and build muscle memory for 1-click dials.
+            </div>
+          </div>
+
+          <!-- Dual Co-Hosting Roles (8 Cols) -->
+          <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            
+            <!-- Host 1: Frontline Manager -->
+            <div class="p-5 rounded-2xl bg-[#ffffff] border-2 border-[#1a365d]/20 hover:border-[#1a365d] transition space-y-2.5 shadow-2xs">
+              <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-[#1a365d] text-white flex items-center justify-center text-xs font-bold">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-black text-[#1a365d] uppercase tracking-wide">Co-Host 01 · Frontline Manager</h5>
+                    <span class="text-[11px] text-slate-500">Sales Strategy & Live Objection Coach</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="text-xs text-[#334155] space-y-2 pt-1">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Live Feedback & Ad Hoc Coaching:</strong> Reps can unmute to ask questions and drop live feedback into the chat as they work through the tool.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Account Strategy & Guidance:</strong> Supports in answering seller questions and providing tool guidance as needed.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-emerald-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Accountability & Rituals:</strong> Tracks booked meetings live on the team scoreboard and celebrates high-activity momentum.</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Host 2: GTM Productivity Specialist -->
+            <div class="p-5 rounded-2xl bg-[#ffffff] border-2 border-[#f2994a]/30 hover:border-[#f2994a] transition space-y-2.5 shadow-2xs">
+              <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                <div class="flex items-center space-x-2">
+                  <div class="w-7 h-7 rounded-lg bg-[#f2994a] text-white flex items-center justify-center text-xs font-bold">
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <div>
+                    <h5 class="text-xs font-black text-[#ea580c] uppercase tracking-wide">Co-Host 02 · GTM Specialist</h5>
+                    <span class="text-[11px] text-slate-500">Real-Time Workflow & Friction Support</span>
+                  </div>
+                </div>
+              </div>
+              <ul class="text-xs text-[#334155] space-y-2 pt-1">
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-orange-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Workflow Troubleshooting:</strong> Assists in answering Maverick questions in chat or acknowledging feedback within 60 seconds.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-orange-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Critical Bug Escalation:</strong> Records any major bugs or critical usage issues for the Sales AI Engineer.</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <i class="fa-solid fa-check text-orange-600 mt-0.5 text-[11px]"></i>
+                  <span><strong>Feedback Aggregation:</strong> Captures all feedback to aggregate and prioritize ahead of weekly AI Sales Engineer sync and Bi-Weekly Cross-Functional Adoption Sync.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Format: 3 x 15-Minute Pomodoro Execution Sprints -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#f2994a]"></span>
+              <h4 class="text-xs sm:text-sm font-black uppercase tracking-wider text-[#1a365d]">
+                Format · Three 15-Minute Pomodoro-Style Execution Sprints (45 Min Deep Work)
+              </h4>
+            </div>
+            <span class="text-xs font-bold text-slate-500">Total: 45 Mins Sprints + 15 Mins Wrap</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            
+            <!-- Sprint 01 -->
+            <div class="p-5 rounded-2xl bg-[#f8fafc] border-2 border-[#e2e8f0] flex flex-col justify-between space-y-4 hover:border-[#1a365d] transition shadow-2xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                  <span class="px-2.5 py-1 rounded-md bg-[#1a365d]/10 text-[#1a365d] font-black text-xs uppercase tracking-wider">
+                    Sprint 01 · 15 Mins
+                  </span>
+                  <span class="text-xs font-mono font-bold text-slate-500">00:00 - 15:00</span>
+                </div>
+                <h5 class="text-sm font-extrabold text-[#0f172a]">Signal & Account Research</h5>
+                <p class="text-xs text-[#334155] leading-relaxed">
+                  Identify high-probability targets with live catalyst signals before dialing.
+                </p>
+
+                <div class="space-y-2 text-xs text-[#334155]">
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-[#0d5c63] block font-bold">Step 1 · Filter Rate Catalysts:</strong>
+                    Pull hotel comp rate drops, CRS tech stack changes, or new GM/DOS announcements.
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-[#0d5c63] block font-bold">Step 2 · 60-Sec Maverick Brief:</strong>
+                    Generate 3 briefs; review decision-maker phone numbers & customized value angles.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-blue-50 border border-blue-200 text-[11px] text-blue-900 font-bold flex items-center justify-between">
+                <span>🎯 Rep Target:</span>
+                <span class="font-extrabold">3 Validated Briefs Pulled</span>
+              </div>
+            </div>
+
+            <!-- Sprint 02 -->
+            <div class="p-5 rounded-2xl bg-[#f8fafc] border-2 border-[#ea580c]/30 hover:border-[#ea580c] transition flex flex-col justify-between space-y-4 shadow-2xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                  <span class="px-2.5 py-1 rounded-md bg-[#ea580c]/10 text-[#ea580c] font-black text-xs uppercase tracking-wider">
+                    Sprint 02 · 15 Mins
+                  </span>
+                  <span class="text-xs font-mono font-bold text-slate-500">15:00 - 30:00</span>
+                </div>
+                <h5 class="text-sm font-extrabold text-[#0f172a]">1-Click Calling Blitz</h5>
+                <p class="text-xs text-[#334155] leading-relaxed">
+                  High-intensity phone blitz using Maverick's 1-click calling & call scripts.
+                </p>
+
+                <div class="space-y-2 text-xs text-[#334155]">
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-[#ea580c] block font-bold">Step 1 · 1-Click Dialing:</strong>
+                    Trigger outbound calls directly from the Maverick brief with zero manual phone dialing.
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-[#ea580c] block font-bold">Step 2 · Live Objection Assist:</strong>
+                    Drop tough gatekeeper hurdles into chat; manager un-mutes for 30-sec coaching.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-orange-50 border border-orange-200 text-[11px] text-orange-900 font-bold flex items-center justify-between">
+                <span>🎯 Rep Target:</span>
+                <span class="font-extrabold">6 to 8 Dials or 1 to 3 Connects</span>
+              </div>
+            </div>
+
+            <!-- Sprint 03 -->
+            <div class="p-5 rounded-2xl bg-[#f8fafc] border-2 border-emerald-500/30 hover:border-emerald-600 transition flex flex-col justify-between space-y-4 shadow-2xs">
+              <div class="space-y-3">
+                <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                  <span class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 font-black text-xs uppercase tracking-wider">
+                    Sprint 03 · 15 Mins
+                  </span>
+                  <span class="text-xs font-mono font-bold text-slate-500">30:00 - 45:00</span>
+                </div>
+                <h5 class="text-sm font-extrabold text-[#0f172a]">Multi-Touch Localized Outreach</h5>
+                <p class="text-xs text-[#334155] leading-relaxed">
+                  Dispatch localized follow-ups and verify automated zero-admin CRM sync.
+                </p>
+
+                <div class="space-y-2 text-xs text-[#334155]">
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-emerald-700 block font-bold">Step 1 · Localized Emails:</strong>
+                    Send dynamic email snippets tailored in native tongues (EN, DE, FR, ES) with verified direct links.
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white border border-[#e2e8f0] space-y-0.5">
+                    <strong class="text-emerald-700 block font-bold">Step 2 · Zero-Admin CRM Check:</strong>
+                    Confirm call dispositions and emails auto-logged directly into Salesforce tasks.
+                  </div>
+                </div>
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-[11px] text-emerald-900 font-bold flex items-center justify-between">
+                <span>🎯 Rep Target:</span>
+                <span class="font-extrabold">3 Localized Follow-ups Logged</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sprint Wrap & Win Tally Banner (45:00 - 60:00) -->
+        <div class="p-4 rounded-xl bg-slate-900 text-white flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs">
+          <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-[#f2994a] flex items-center justify-center font-bold text-white text-sm flex-shrink-0">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <span class="font-bold text-[#f2994a] uppercase tracking-wider text-[11px] block">Minutes 45:00 - 60:00 · Debrief & Scoreboard</span>
+              <span class="text-white font-medium">Tally booked meetings, award real-time chat shout-outs, and queue logged roadblocks for the Bi-Weekly Sync.</span>
+            </div>
+          </div>
+          <span class="px-3 py-1 rounded-full bg-white/10 text-white/90 font-mono text-[11px] whitespace-nowrap self-start sm:self-auto">
+            Avg Power Hour: 3 to 4 Meetings Booked / Team
+          </span>
+        </div>
+
+        <!-- Strict Rules of Engagement (3 Key Mandates) -->
+        <div class="space-y-3 pt-2">
+          <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] flex items-center gap-1.5">
+            <i class="fa-solid fa-shield-halved text-[#ea580c]"></i> Rules of Engagement (Non-Negotiable Frontline Protocol)
+          </span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            
+            <!-- Rule 1: Cameras Off -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-1.5 shadow-2xs">
+              <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 rounded-md bg-slate-200 text-slate-800 flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-video-slash"></i>
+                </div>
+                <strong class="text-xs font-extrabold text-[#1a365d]">1. Cameras Off (Deep Focus)</strong>
+              </div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Reps keep webcams turned off during sprints to minimize cognitive load, eliminate performative video fatigue, and maintain pure prospecting flow state.
+              </p>
+            </div>
+
+            <!-- Rule 2: Exclusively Maverick -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-1.5 shadow-2xs">
+              <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 rounded-md bg-orange-100 text-[#ea580c] flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-ban"></i>
+                </div>
+                <strong class="text-xs font-extrabold text-[#ea580c]">2. Exclusively Maverick</strong>
+              </div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Zero legacy spreadsheets or external Google searches permitted. Every account researched, dial initiated, and follow-up sent must originate inside Maverick.
+              </p>
+            </div>
+
+            <!-- Rule 3: Chat-First Friction & Unmutes -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-1.5 shadow-2xs">
+              <div class="flex items-center space-x-2">
+                <div class="w-6 h-6 rounded-md bg-emerald-100 text-emerald-800 flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-comments"></i>
+                </div>
+                <strong class="text-xs font-extrabold text-emerald-900">3. Chat-First Friction & Unmutes</strong>
+              </div>
+              <p class="text-xs text-[#334155] leading-relaxed">
+                Reps drop questions and roadblocks in the chat for instant GTM Specialist triage. Sellers take 30-sec unmutes only for live manager coaching on active objection calls.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Interactive Frontline Manager SOP Checklist -->
+        <div class="p-5 rounded-2xl bg-[#fcfbf7] border border-[#e8e5dc] space-y-3.5">
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div>
+              <span class="text-[11px] font-black uppercase tracking-wider text-[#0d5c63] block">Manager Interactive Checklist</span>
+              <h5 class="text-sm font-bold text-[#0f172a]">Weekly Power Hour Preparation & Execution SOP</h5>
+            </div>
+            <span id="sop-checklist-counter" class="px-3 py-1 rounded-full bg-[#1a365d] text-white text-xs font-bold self-start sm:self-auto">
+              0 of 5 Steps Completed
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+            <label class="p-3 rounded-xl bg-white border border-[#cbd5e1] flex items-start gap-2.5 cursor-pointer hover:border-[#1a365d] transition">
+              <input type="checkbox" onchange="updateSOPChecklist()" class="sop-checkbox mt-0.5 rounded text-[#f2994a] focus:ring-[#f2994a]" />
+              <span class="text-slate-700 leading-snug"><strong>1. Pre-Block Sync:</strong> Confirm GTM Specialist and any low-adopter co-driver attendance 15m prior to start.</span>
+            </label>
+            <label class="p-3 rounded-xl bg-white border border-[#cbd5e1] flex items-start gap-2.5 cursor-pointer hover:border-[#1a365d] transition">
+              <input type="checkbox" onchange="updateSOPChecklist()" class="sop-checkbox mt-0.5 rounded text-[#f2994a] focus:ring-[#f2994a]" />
+              <span class="text-slate-700 leading-snug"><strong>2. Announce Rules & Goals:</strong> Review Rules of Engagement, set a clear metric goal for the working session. Hitting the goal doesn't mean to stop.</span>
+            </label>
+            <label class="p-3 rounded-xl bg-white border border-[#cbd5e1] flex items-start gap-2.5 cursor-pointer hover:border-[#1a365d] transition">
+              <input type="checkbox" onchange="updateSOPChecklist()" class="sop-checkbox mt-0.5 rounded text-[#f2994a] focus:ring-[#f2994a]" />
+              <span class="text-slate-700 leading-snug"><strong>3. Timer Discipline:</strong> Enforce 15-minute audible chimes between sprints.</span>
+            </label>
+            <label class="p-3 rounded-xl bg-white border border-[#cbd5e1] flex items-start gap-2.5 cursor-pointer hover:border-[#1a365d] transition">
+              <input type="checkbox" onchange="updateSOPChecklist()" class="sop-checkbox mt-0.5 rounded text-[#f2994a] focus:ring-[#f2994a]" />
+              <span class="text-slate-700 leading-snug"><strong>4. Live Coaching:</strong> Provide 30-sec tool walkthroughs, or objection support, as needed.</span>
+            </label>
+            <label class="p-3 rounded-xl bg-white border border-[#cbd5e1] flex items-start gap-2.5 cursor-pointer hover:border-[#1a365d] transition">
+              <input type="checkbox" onchange="updateSOPChecklist()" class="sop-checkbox mt-0.5 rounded text-[#f2994a] focus:ring-[#f2994a]" />
+              <span class="text-slate-700 leading-snug"><strong>5. Log Feedback & Bugs:</strong> GTM Product Specialist will export chat to incorporate into product dev triage queue.</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- 2. BI-WEEKLY CROSS-FUNCTIONAL ADOPTION SYNC (60 MIN)                   -->
+      <!-- ===================================================================== -->
+      <div id="section-adoption-sync" class="brand-card p-6 sm:p-8 space-y-7 bg-white border border-[#eceae4] rounded-2xl shadow-sm scroll-mt-6">
+        
+        <!-- Header Row -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-4 border-b border-[#e2e8f0] gap-3">
+          <div>
+            <span class="text-xs font-black uppercase tracking-widest text-[#0d5c63] flex items-center gap-1.5">
+              <i class="fa-solid fa-arrows-split-up-and-left text-[#f2994a]"></i> Executive & Regional Alignment Cadence
+            </span>
+            <h3 class="text-lg sm:text-xl font-extrabold text-[#1a365d] mt-0.5">
+              Bi-Weekly Cross-Functional Adoption Sync (3 Regional 60-Min Sessions)
+            </h3>
+            <p class="text-xs sm:text-sm text-[#475569] mt-0.5">
+              Held as 3 dedicated regional calls (AMER, EMEA, APAC) to respect timezones, provide deep focus on territory bottlenecks, and benchmark cross-regional metric performance.
+            </p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2 self-start sm:self-auto">
+            <span class="px-3 py-1 rounded-xl bg-blue-50 border border-blue-200 text-xs font-bold text-[#1a365d] shadow-2xs">
+              3 Regional Calls (AMER · EMEA · APAC)
+            </span>
+            <span class="px-3 py-1 rounded-xl bg-emerald-50 border border-emerald-200 text-xs font-bold text-emerald-800 shadow-2xs">
+              Bi-Weekly · 60 Mins Each
+            </span>
+          </div>
+        </div>
+
+        <!-- Stakeholder Attendees Grid -->
+        <div class="space-y-3">
+          <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] block">
+            Required Attendee Roster & Stakeholder Ownership
+          </span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Attendee 1: Executive Stakeholders -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-2">
+              <div class="flex items-center space-x-2">
+                <span class="w-6 h-6 rounded-md bg-[#1a365d] text-white flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-user-tie"></i>
+                </span>
+                <span class="text-xs font-extrabold text-[#1a365d]">Executives & CRO</span>
+              </div>
+              <p class="text-[11.5px] text-[#334155] leading-relaxed">
+                <strong>CRO & VP RevEx:</strong> Authorize SPIFF budgets, resolve inter-regional friction, review pipeline generated ($), and approve product roadmap tradeoffs.
+              </p>
+            </div>
+
+            <!-- Attendee 2: Frontline Sales Leadership -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-2">
+              <div class="flex items-center space-x-2">
+                <span class="w-6 h-6 rounded-md bg-[#0d5c63] text-white flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-users"></i>
+                </span>
+                <span class="text-xs font-extrabold text-[#0d5c63]">Sales Managers & VPs</span>
+              </div>
+              <p class="text-[11.5px] text-[#334155] leading-relaxed">
+                <strong>15 Managers & 3 Regional VPs:</strong> Report frontline adoption sentiment, review regional leaderboard shifts, and commit to peer-pairing assignments.
+              </p>
+            </div>
+
+            <!-- Attendee 3: Sales AI Engineer -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border border-[#cbd5e1] space-y-2">
+              <div class="flex items-center space-x-2">
+                <span class="w-6 h-6 rounded-md bg-[#ea580c] text-white flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-code"></i>
+                </span>
+                <span class="text-xs font-extrabold text-[#ea580c]">Sales AI Engineer</span>
+              </div>
+              <p class="text-[11.5px] text-[#334155] leading-relaxed">
+                <strong>Thomas (Sales AI Engineer):</strong> Assesses technical feasibility of seller requests, estimates value vs. effort, and commits 2-week sprint capacity.
+              </p>
+            </div>
+
+            <!-- Attendee 4: Meeting Driver -->
+            <div class="p-4 rounded-xl bg-[#f8f9fa] border-2 border-[#f2994a] space-y-2">
+              <div class="flex items-center space-x-2">
+                <span class="w-6 h-6 rounded-md bg-[#f2994a] text-white flex items-center justify-center text-xs font-bold">
+                  <i class="fa-solid fa-compass"></i>
+                </span>
+                <span class="text-xs font-extrabold text-[#ea580c]">Meeting Driver</span>
+              </div>
+              <p class="text-[11.5px] text-[#334155] leading-relaxed">
+                <strong>GTM Specialist (Sarah Manning):</strong> Moderates the 60-min agenda, synthesizes metric results, drives roadmap tradeoffs, and tracks action item execution.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 60-Minute Agenda Structure (Two 30-Minute Halves) -->
+        <div class="space-y-4 pt-2">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] flex items-center gap-1.5">
+              <i class="fa-solid fa-clock text-[#f2994a]"></i> The 60-Minute Structured Agenda (Two 30-Minute Halves)
+            </span>
+            <span class="text-xs text-slate-500 font-bold">30 Mins Sales Focus + 30 Mins Product Focus</span>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Half 1: Behavioral Replication -->
+            <div class="p-5 rounded-2xl bg-[#ffffff] border-2 border-[#1a365d]/20 space-y-4 shadow-2xs">
+              <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                <div class="flex items-center space-x-2">
+                  <span class="px-2.5 py-1 rounded-md bg-[#1a365d] text-white font-black text-xs uppercase tracking-wider">
+                    Half 01 · 30 Mins
+                  </span>
+                  <span class="font-extrabold text-[#1a365d] text-xs">Behavioral Replication (Sales Focus)</span>
+                </div>
+                <span class="text-xs font-mono font-bold text-slate-500">00:00 - 30:00</span>
+              </div>
+
+              <div class="space-y-3 text-xs text-[#334155]">
+                
+                <div class="p-3 rounded-xl bg-[#f8fafc] border border-[#e2e8f0] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-[#1a365d] font-bold">1. Diagnosing Regional Adoption Gaps (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">Metrics Inspection</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    Inspect metrics variance across AMER (92%), UK (86%), EMEA (88%), and APAC (64%). Unpack root causes: language friction vs. manager habit inspection vs. contact data gaps.
+                  </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-[#f8fafc] border border-[#e2e8f0] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-[#0d5c63] font-bold">2. Highlighting Standout Rep Wins (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">Adoption Leadership</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    Highlight sellers with high adoption metrics. What can we learn from them? What best practices can be imparted to lower adopters across the region?
+                  </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-[#f8fafc] border border-[#e2e8f0] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-[#ea580c] font-bold">3. Peer-Pairing & Co-Leadership Mandate (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">Co-Working & Co-Leading</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    Determine which High-Adopter Champions can be paired with low-adopter or struggling reps for an extra 1:1 45-minute co-working outreach block per week. Additionally, determine which low adopters should help lead the following week's team Power Hour alongside the manager and the GTM Productivity Specialist.
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-teal-50 border border-teal-200 text-[11px] text-[#0d5c63] font-bold flex items-center justify-between">
+                <span>🎯 Half 1 Deliverable:</span>
+                <span>Published plan to increase adoption metrics toward goal</span>
+              </div>
+            </div>
+
+            <!-- Half 2: Roadmap Triage -->
+            <div class="p-5 rounded-2xl bg-[#ffffff] border-2 border-[#ea580c]/30 space-y-4 shadow-2xs">
+              <div class="flex items-center justify-between pb-2 border-b border-[#e2e8f0]">
+                <div class="flex items-center space-x-2">
+                  <span class="px-2.5 py-1 rounded-md bg-[#ea580c] text-white font-black text-xs uppercase tracking-wider">
+                    Half 02 · 30 Mins
+                  </span>
+                  <span class="font-extrabold text-[#ea580c] text-xs">Roadmap Triage (Product & Eng Focus)</span>
+                </div>
+                <span class="text-xs font-mono font-bold text-slate-500">30:00 - 60:00</span>
+              </div>
+
+              <div class="space-y-3 text-xs text-[#334155]">
+                
+                <div class="p-3 rounded-xl bg-[#fcfbf7] border border-[#e8e5dc] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-[#ea580c] font-bold">1. Presenting Aggregated Rep Feedback (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">R.I.C.E. & Tiering Review</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    GTM Specialist presents prioritized friction logs compiled directly from in-app feedback, manager surveys, and Power Hour chat logs, ranked by the R.I.C.E. model and T1-T3 tiering system. Get sales leadership consensus on top priority items.
+                  </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-[#fcfbf7] border border-[#e8e5dc] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-[#1a365d] font-bold">2. Development Feasibility & Effort Scoring (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">Timeline & Feasibility</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    Sales AI Engineer Thomas reviews top 3 priority product solutions on roadmap, estimates value vs. effort, and assigns an estimated timeline for completion to each.
+                  </p>
+                </div>
+
+                <div class="p-3 rounded-xl bg-[#fcfbf7] border border-[#e8e5dc] space-y-1">
+                  <div class="flex items-center justify-between">
+                    <strong class="text-emerald-700 font-bold">3. Finalizing Roadmap Tradeoffs (10 Mins)</strong>
+                    <span class="text-[10.5px] text-slate-500 font-bold">Stakeholder Sign-Off</span>
+                  </div>
+                  <p class="text-[11.5px] text-slate-600 leading-snug">
+                    Live sign-off between all call stakeholders on which engineering fixes are committed to the immediate sprint vs. deferred to subsequent releases.
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="p-2.5 rounded-xl bg-orange-50 border border-orange-200 text-[11px] text-orange-950 font-bold flex items-center justify-between">
+                <span>🎯 Half 2 Deliverable:</span>
+                <span>Signed-Off Engineering Sprint Commitments</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- UI REQUIREMENT 3: 3-SLIDE SYNC TEMPLATE VIEWER                         -->
+      <!-- ===================================================================== -->
+      <div id="section-sync-slides" class="brand-card p-6 sm:p-8 space-y-6 bg-white border border-[#eceae4] rounded-2xl shadow-sm scroll-mt-6">
+        
+        <!-- Header Row with Controls -->
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between pb-4 border-b border-[#e2e8f0] gap-4">
+          <div>
+            <span class="text-xs font-black uppercase tracking-widest text-[#0d5c63] flex items-center gap-1.5">
+              <i class="fa-solid fa-presentation-screen text-[#f2994a]"></i> Standardized Presentation Deck Template
+            </span>
+            <h3 class="text-lg sm:text-xl font-extrabold text-[#1a365d] mt-0.5">
+              3-Slide Sync Template Viewer (GTM Specialist Operating Deck Sample)
+            </h3>
+            <p class="text-xs sm:text-sm text-[#475569] mt-0.5">
+              Interactive viewer displaying the standardized 3-slide format utilized by the GTM Specialist to run the Bi-Weekly Adoption Sync.
+            </p>
+          </div>
+
+          <!-- Slide Switcher Pills -->
+          <div class="flex items-center space-x-1.5 bg-[#f8fafc] border border-[#cbd5e1] p-1.5 rounded-xl shadow-2xs self-start sm:self-auto">
+            <button onclick="goToSyncSlide(1)" id="sync-tab-1" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-[#1a365d] text-white transition cursor-pointer">
+              Slide 1 · Adoption & Replication
+            </button>
+            <button onclick="goToSyncSlide(2)" id="sync-tab-2" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer">
+              Slide 2 · Workflow Friction
+            </button>
+            <button onclick="goToSyncSlide(3)" id="sync-tab-3" class="px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer">
+              Slide 3 · Executive Sign-Off
+            </button>
+          </div>
+        </div>
+
+        <!-- Mini Slide Presentation Viewport -->
+        <div class="p-6 sm:p-8 rounded-2xl bg-[#f8f9fa] border border-[#e2e8f0] min-h-[420px] flex flex-col justify-between relative shadow-inner">
+          
+          <!-- Slide Meta Top Bar -->
+          <div class="flex items-center justify-between pb-3 border-b border-[#cbd5e1]/60 mb-5 text-xs">
+            <div class="flex items-center space-x-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#f2994a]"></span>
+              <span id="sync-slide-title-badge" class="font-bold text-[#1a365d] uppercase tracking-wider text-[11px]">
+                SLIDE 01 · ADOPTION & BEHAVIORAL REPLICATION
+              </span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span id="sync-slide-counter" class="font-mono font-bold text-slate-600 text-xs">Slide 1 of 3</span>
+              <div class="flex items-center space-x-1">
+                <button onclick="prevSyncSlide()" id="btn-sync-prev" class="w-7 h-7 rounded-lg bg-white border border-[#cbd5e1] flex items-center justify-center text-slate-600 hover:bg-[#1a365d] hover:text-white transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+                  <i class="fa-solid fa-chevron-left text-[11px]"></i>
+                </button>
+                <button onclick="nextSyncSlide()" id="btn-sync-next" class="w-7 h-7 rounded-lg bg-white border border-[#cbd5e1] flex items-center justify-center text-slate-600 hover:bg-[#1a365d] hover:text-white transition cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed">
+                  <i class="fa-solid fa-chevron-right text-[11px]"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- SLIDE 1 CONTAINER: ADOPTION VARIANCE, FLAGGED METRICS & MANAGER AUDIT -->
+          <div id="sync-slide-1" class="sync-slide-content space-y-6">
+            
+            <!-- Slide Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pb-3 border-b border-[#cbd5e1]/60">
+              <div>
+                <span class="text-xs font-black uppercase tracking-wider text-[#ea580c] block">Slide 1 · Regional Diagnostics & Manager Day-to-Day Audit</span>
+                <h4 class="text-xl font-extrabold text-[#1a365d] mt-1">
+                  Adoption Variance & Flagged Metrics: Regional, Team & Rep Diagnostics
+                </h4>
+                <p class="text-xs text-[#334155] mt-0.5">
+                  Conducted across 3 dedicated regional calls (AMER, EMEA, APAC) to overcome timezone barriers and provide focused root-cause triage.
+                </p>
+              </div>
+              <span class="px-3 py-1 rounded-xl bg-orange-100 text-[#ea580c] font-black text-xs border border-orange-200 self-start sm:self-auto">
+                3 Separate Regional Syncs
+              </span>
+            </div>
+
+            <!-- 1. Regional Adoption & WoW Drop Alert Row (Condensend to 3 Regions: AMER, EMEA, APAC) -->
+            <div class="space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] flex items-center gap-1.5">
+                  <i class="fa-solid fa-chart-line text-[#f2994a]"></i> Regional Adoption Rates Over Past Two Weeks (Week 5 vs. Week 6)
+                </span>
+                <span class="text-[11px] text-slate-500 font-bold">Cross-Regional Performance Comparison</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+                
+                <!-- AMER Tile -->
+                <div class="p-4 rounded-xl bg-white border-2 border-emerald-500 shadow-2xs space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-black text-slate-700 uppercase">AMER (45 Reps)</span>
+                    <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[10px] font-bold">+4% WoW</span>
+                  </div>
+                  <div class="flex items-baseline space-x-2">
+                    <span class="text-2xl font-black text-emerald-700">92%</span>
+                    <span class="text-xs text-slate-500 font-medium">in Week 6 (vs. 88% in Week 5)</span>
+                  </div>
+                  <div class="text-[11px] text-emerald-800 font-bold">
+                    Benchmark Leader · High Call & Brief Momentum
+                  </div>
+                </div>
+
+                <!-- EMEA Tile -->
+                <div class="p-4 rounded-xl bg-white border-2 border-teal-500 shadow-2xs space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-black text-slate-700 uppercase">EMEA (75 Reps)</span>
+                    <span class="px-2 py-0.5 rounded bg-teal-100 text-teal-800 text-[10px] font-bold">+2% WoW</span>
+                  </div>
+                  <div class="flex items-baseline space-x-2">
+                    <span class="text-2xl font-black text-[#0d5c63]">88%</span>
+                    <span class="text-xs text-slate-500 font-medium">in Week 6 (vs. 86% in Week 5)</span>
+                  </div>
+                  <div class="text-[11px] text-teal-800 font-bold">
+                    Strong Conversion · High Activity Lift
+                  </div>
+                </div>
+
+                <!-- APAC Tile (Falling WoW Alert) -->
+                <div class="p-4 rounded-xl bg-rose-50 border-2 border-rose-500 shadow-2xs space-y-1.5">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[11px] font-black text-rose-900 uppercase">APAC (30 Reps)</span>
+                    <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-950 text-[10px] font-black">-8% WoW Drop 🚨</span>
+                  </div>
+                  <div class="flex items-baseline space-x-2">
+                    <span class="text-2xl font-black text-rose-700">64%</span>
+                    <span class="text-xs text-rose-800 font-semibold">in Week 6 (fell from 72% in Week 5)</span>
+                  </div>
+                  <div class="text-[11px] text-rose-800 font-extrabold">
+                    Critical Adoption Drop · 1-Click Dialing Bug & JP/CN Tone Nuances
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Critical WoW Warning Banner -->
+              <div class="p-3 rounded-xl bg-rose-100/70 border border-rose-300 text-xs text-rose-950 flex items-start gap-2.5">
+                <i class="fa-solid fa-triangle-exclamation text-rose-600 mt-0.5 flex-shrink-0"></i>
+                <div class="leading-relaxed">
+                  <strong>Critical WoW Adoption Alert:</strong> APAC regional adoption fell by <strong>-8% WoW</strong> (72% in Week 5 → 64% in Week 6). Dedicated APAC regional sync is scheduled to arrest metric slippage, resolve 1-click calling button failures, deploy Japanese & Chinese formal email templates, and realign frontline manager coaching rituals.
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Granular Breakdown: Flagged Metrics & Individual Lagging Reps (Called APAC, EMEA, AMER) -->
+            <div class="space-y-2 pt-1">
+              <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] block">
+                Granular Metric Slippage: Teams & Individual Sellers Causing Drops
+              </span>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 text-xs">
+                
+                <!-- APAC Flagged -->
+                <div class="p-4 rounded-xl bg-white border-2 border-rose-200 space-y-2.5 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-extrabold text-rose-900 text-sm">APAC</span>
+                    <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold text-[10px]">Lagging Region (-8% WoW)</span>
+                  </div>
+                  <div class="space-y-1.5 text-slate-700">
+                    <div>
+                      <strong class="text-[#0f172a] block">Flagged Metrics:</strong>
+                      <span class="text-[11px] text-rose-700 font-bold">Outbound Dials (2.1 dials/rep/day vs. 10 target)</span><br>
+                      <span class="text-[11px] text-rose-700 font-bold">Email Follow-Up Cadence (-35% vs. target · 4-6 min rewrite drag)</span>
+                    </div>
+                    <div>
+                      <strong class="text-[#0f172a] block">Individual Reps Flagged:</strong>
+                      <span class="text-[11.5px] font-semibold text-rose-900">• Rep D (58% Mav · dials stalled by 1-click button malfunction)</span><br>
+                      <span class="text-[11.5px] font-semibold text-rose-900">• Rep K (52% Mav · 4-6m manual rewrites on JP & CN drafts)</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-0.5 leading-snug">
+                      <em>Root Cause:</em> Broken 1-click calling button blocked outbound phone blitzes, while lacking Japanese & Chinese formal tone templates forced sellers into lengthy manual rewrites, dropping APAC adoption.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- EMEA Flagged -->
+                <div class="p-4 rounded-xl bg-white border-2 border-amber-200 space-y-2.5 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-extrabold text-amber-950 text-sm">EMEA</span>
+                    <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-bold text-[10px]">Pockets of Variance</span>
+                  </div>
+                  <div class="space-y-1.5 text-slate-700">
+                    <div>
+                      <strong class="text-[#0f172a] block">Flagged Metrics:</strong>
+                      <span class="text-[11px] text-amber-800 font-bold">Accounts Researched (6.8 briefs/rep/day vs. 9.0 target)</span><br>
+                      <span class="text-[11px] text-amber-800 font-bold">Outbound Dials (7.2 dials/rep/day vs. 10 target)</span>
+                    </div>
+                    <div>
+                      <strong class="text-[#0f172a] block">Individual Reps Flagged:</strong>
+                      <span class="text-[11.5px] font-semibold text-amber-950">• Rep H (68% Mav · brief generation lag on regional portfolios)</span><br>
+                      <span class="text-[11.5px] font-semibold text-amber-950">• Rep M (65% Mav · dial bridge drop workaround coaching)</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-0.5 leading-snug">
+                      <em>Root Cause:</em> Lower account research volume on regional hotel chains before reps apply Maverick signal filters.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- AMER Flagged -->
+                <div class="p-4 rounded-xl bg-white border-2 border-blue-200 space-y-2.5 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-extrabold text-[#1a365d] text-sm">AMER</span>
+                    <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold text-[10px]">Behavioral Inertia</span>
+                  </div>
+                  <div class="space-y-1.5 text-slate-700">
+                    <div>
+                      <strong class="text-[#0f172a] block">Flagged Metrics:</strong>
+                      <span class="text-[11px] text-blue-900 font-bold">CRM Auto-Sync Activity Logging (48% vs. 70% target)</span><br>
+                      <span class="text-[11px] text-blue-900 font-bold">Days Active (2.2 days active/week vs. 4.5 target)</span>
+                    </div>
+                    <div>
+                      <strong class="text-[#0f172a] block">Individual Reps Flagged:</strong>
+                      <span class="text-[11.5px] font-semibold text-[#1a365d]">• Rep B (54% Mav · reverting to spreadsheets)</span><br>
+                      <span class="text-[11.5px] font-semibold text-[#1a365d]">• Rep L (56% Mav · intermittent weekly usage)</span>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-0.5 leading-snug">
+                      <em>Root Cause:</em> Reps researching accounts in Maverick but logging calls on personal desktop spreadsheets out of habit, hiding pipeline visibility.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- 3. Frontline Manager Day-to-Day Audit: Inspecting Enablement Rituals -->
+            <div class="p-4 rounded-xl bg-[#fcfbf7] border border-[#e8e5dc] space-y-2.5 text-xs">
+              <div class="flex items-center justify-between pb-1 border-b border-[#e8e5dc]">
+                <span class="font-black text-[#1a365d] uppercase tracking-wider flex items-center gap-1.5">
+                  <i class="fa-solid fa-clipboard-user text-[#0d5c63]"></i> Frontline Manager Day-to-Day Audit (When Adoption Drops)
+                </span>
+                <span class="text-[11px] font-bold text-[#ea580c]">Inspecting Manager Daily Reinforcement</span>
+              </div>
+              <p class="text-[11.5px] text-[#334155] leading-relaxed">
+                When adoption falls, executive syncs immediately audit manager execution across three critical daily touchpoints:
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-1">
+                <div class="p-3 rounded-lg bg-white border border-[#cbd5e1] space-y-1">
+                  <strong class="text-[#1a365d] block">1. Monday Team Call Ritual:</strong>
+                  <p class="text-[11px] text-slate-600 leading-snug">
+                    Are managers executing the mandatory 5-min Maverick "Signal & Win" screen-share spotlight, or are they skipping it and letting rep momentum fade?
+                  </p>
+                </div>
+                <div class="p-3 rounded-lg bg-white border border-[#cbd5e1] space-y-1">
+                  <strong class="text-[#1a365d] block">2. Weekly 1:1 Agenda Discipline:</strong>
+                  <p class="text-[11px] text-slate-600 leading-snug">
+                    Are managers actively pulling up Salesforce and Maverick activity metrics before 1:1s to inspect each rep's lift, or accepting subjective seller updates?
+                  </p>
+                </div>
+                <div class="p-3 rounded-lg bg-white border border-[#cbd5e1] space-y-1">
+                  <strong class="text-[#1a365d] block">3. Immediate Straggler Intervention:</strong>
+                  <p class="text-[11px] text-slate-600 leading-snug">
+                    Are managers conducting same-week follow-up for sellers below 65% adoption, mandating shadowed Power Hour blocks rather than treating non-usage as optional?
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Same-Region Mandated Peer-Pairings -->
+            <div class="space-y-2 pt-1">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black uppercase tracking-wider text-[#1a365d] block">
+                  Same-Region Mandated Peer-Pairings (Intra-Regional Outreach Blocks)
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+                
+                <!-- Pair 1: AMER Intra-Regional -->
+                <div class="p-3.5 rounded-xl bg-white border-2 border-emerald-400 space-y-2 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-bold text-[#1a365d]">AMER Pair · EST/PST Overlap</span>
+                    
+                  </div>
+                  <div class="text-[11.5px] space-y-1 text-slate-700">
+                    <div><strong>High Champion:</strong> Rep A (AMER Indie · 92% Mav)</div>
+                    <div><strong>Low Adopter:</strong> Rep B (AMER Indie · 54% Mav)</div>
+                    <p class="text-[11px] text-slate-600 pt-1 leading-snug">
+                      <em>45-Min 1:1 Block:</em> Weekly co-working outreach block to retire spreadsheet tracking and master 1-click dial auto-sync.
+                    </p>
+                    <p class="text-[11px] text-[#ea580c] font-bold pt-0.5">
+                      <em>Co-Leadership:</em> Rep B assigned to co-lead next week's AMER team Power Hour alongside Manager.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Pair 2: EMEA Intra-Regional -->
+                <div class="p-3.5 rounded-xl bg-white border-2 border-teal-400 space-y-2 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-bold text-[#1a365d]">EMEA Pair · GMT/CET Overlap</span>
+                    
+                  </div>
+                  <div class="text-[11.5px] space-y-1 text-slate-700">
+                    <div><strong>High Champion:</strong> Rep E (France Indie · 88% Mav)</div>
+                    <div><strong>Low Adopter:</strong> Rep H (DACH Team · 68% Mav)</div>
+                    <p class="text-[11px] text-slate-600 pt-1 leading-snug">
+                      <em>45-Min 1:1 Block:</em> Weekly co-working outreach block tailored to localized objection handling & rapid account research workflows.
+                    </p>
+                    <p class="text-[11px] text-[#ea580c] font-bold pt-0.5">
+                      <em>Co-Leadership:</em> Rep H assigned to co-lead next week's EMEA team Power Hour alongside Manager.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Pair 3: APAC Intra-Regional -->
+                <div class="p-3.5 rounded-xl bg-white border-2 border-blue-400 space-y-2 shadow-2xs">
+                  <div class="flex items-center justify-between pb-1.5 border-b border-[#e2e8f0]">
+                    <span class="font-bold text-[#1a365d]">APAC Pair · SGT/AEST Overlap</span>
+                    
+                  </div>
+                  <div class="text-[11.5px] space-y-1 text-slate-700">
+                    <div><strong>High Champion:</strong> Rep C (APAC Groups · 82% Mav)</div>
+                    <div><strong>Low Adopter:</strong> Rep D (APAC Mid-Market · 58% Mav)</div>
+                    <p class="text-[11px] text-slate-600 pt-1 leading-snug">
+                      <em>45-Min 1:1 Block:</em> Weekly co-working outreach block focusing on dialer workaround techniques and sharing pre-approved Japanese & Chinese formal email snippets.
+                    </p>
+                    <p class="text-[11px] text-[#ea580c] font-bold pt-0.5">
+                      <em>Co-Leadership:</em> Rep D assigned to co-lead next week's APAC team Power Hour alongside Manager.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SLIDE 2 CONTAINER: WORKFLOW FRICTION -->
+          <div id="sync-slide-2" class="sync-slide-content hidden space-y-6">
+            <div>
+              <span class="text-xs font-black uppercase tracking-wider text-[#ea580c] block">Slide 2 · In-App Feedback, Manager Surveys & Power Hour Logs</span>
+              <h4 class="text-xl font-extrabold text-[#1a365d] mt-1">
+                Aggregated Workflow Friction Ranked by R.I.C.E. Model & T1-T3 Tiering
+              </h4>
+              <p class="text-xs text-[#334155] mt-1">
+                Compiled from in-app feedback, manager surveys, and Power Hour chat logs with sales leadership consensus.
+              </p>
+            </div>
+
+            <!-- 3 Ranked Friction Bento Cards -->
+            <div class="space-y-3.5">
+              
+              <!-- Rank 1: Critical -->
+              <div class="p-4 rounded-xl bg-white border-2 border-rose-300 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <div class="relative inline-block group">
+                      <span tabindex="0" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-rose-100 hover:bg-rose-200 text-rose-800 font-black text-xs uppercase cursor-pointer transition shadow-2xs border border-rose-200">
+                        <span>Tier 1 · R.I.C.E. Score: 280 · Critical</span>
+                        <i class="fa-solid fa-circle-question text-[11px] text-rose-700"></i>
+                      </span>
+
+                      <!-- Interactive Tooltip -->
+                      <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block group-focus:block z-50 w-72 sm:w-80 p-3.5 rounded-xl bg-slate-900 text-white text-[11px] leading-relaxed shadow-2xl border border-slate-700 pointer-events-none">
+                        <div class="font-bold text-[#f2994a] text-xs pb-1.5 border-b border-slate-700 flex items-center justify-between">
+                          <span>R.I.C.E. Calculation Breakdown</span>
+                          <span class="text-[10px] font-mono text-rose-400 font-bold">Score: 280</span>
+                        </div>
+                        <div class="space-y-1 pt-1.5 text-slate-200">
+                          <div><strong>• Reach (R):</strong> 140 / 150 sellers affected (all active phone dialers)</div>
+                          <div><strong>• Impact (I):</strong> 3.0 (Massive impact · failing button stalls calling blitz by -32%)</div>
+                          <div><strong>• Confidence (C):</strong> 1.0 (100% · verified by 50 mentions & softphone disconnect logs)</div>
+                          <div><strong>• Effort (E):</strong> 1.5 person-weeks</div>
+                          <div class="p-2 rounded bg-slate-800 font-mono text-[10.5px] text-rose-300 mt-1 leading-snug">
+                            Formula: (Reach × Impact × Confidence) ÷ Effort<br>
+                            Math: (140 × 3.0 × 1.0) ÷ 1.5 = <strong>280</strong> (Rank #1 Top Priority)
+                          </div>
+                        </div>
+                        <div class="w-2.5 h-2.5 bg-slate-900 border-r border-b border-slate-700 transform rotate-45 absolute left-6 -bottom-1.5"></div>
+                      </div>
+                    </div>
+                    <span class="font-bold text-[#0f172a] text-sm">1-Click Calling Button Malfunction</span>
+                    <span class="text-xs text-slate-500 font-medium">(50 Mentions)</span>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    <strong>Issue:</strong> 1-click calling button is not functioning, failing to bridge outbound calls directly from Maverick seller views.
+                  </p>
+                  <div class="text-[11px] text-slate-500">
+                    <em>Root Cause:</em> Softphone WebRTC dialer protocol handler failure causing immediate call drops on click, forcing reps into manual copy-pasting or abandoning phone outreach.
+                  </div>
+                </div>
+                <div class="flex-shrink-0 text-right">
+                  <div class="text-lg font-black text-rose-700">-32% Velocity</div>
+                  <span class="text-[10px] text-slate-500 block">Outbound Dials / Hour Drag</span>
+                </div>
+              </div>
+
+              <!-- Rank 2: High -->
+              <div class="p-4 rounded-xl bg-white border-2 border-amber-300 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <div class="relative inline-block group">
+                      <span tabindex="0" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-800 font-black text-xs uppercase cursor-pointer transition shadow-2xs border border-amber-200">
+                        <span>Tier 2 · R.I.C.E. Score: 112 · High</span>
+                        <i class="fa-solid fa-circle-question text-[11px] text-amber-800"></i>
+                      </span>
+
+                      <!-- Interactive Tooltip -->
+                      <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block group-focus:block z-50 w-72 sm:w-80 p-3.5 rounded-xl bg-slate-900 text-white text-[11px] leading-relaxed shadow-2xl border border-slate-700 pointer-events-none">
+                        <div class="font-bold text-[#f2994a] text-xs pb-1.5 border-b border-slate-700 flex items-center justify-between">
+                          <span>R.I.C.E. Calculation Breakdown</span>
+                          <span class="text-[10px] font-mono text-amber-400 font-bold">Score: 112</span>
+                        </div>
+                        <div class="space-y-1 pt-1.5 text-slate-200">
+                          <div><strong>• Reach (R):</strong> 35 regional sellers (APAC Japanese & Chinese territory reps)</div>
+                          <div><strong>• Impact (I):</strong> 2.0 (High impact · saves 4-6 mins/email; reverses APAC adoption drop)</div>
+                          <div><strong>• Confidence (C):</strong> 0.8 (80% · 18 verified mentions & APAC manager feedback)</div>
+                          <div><strong>• Effort (E):</strong> 0.5 person-weeks</div>
+                          <div class="p-2 rounded bg-slate-800 font-mono text-[10.5px] text-amber-300 mt-1 leading-snug">
+                            Formula: (Reach × Impact × Confidence) ÷ Effort<br>
+                            Math: (35 × 2.0 × 0.8) ÷ 0.5 = <strong>112</strong> (Rank #2 High Priority)
+                          </div>
+                        </div>
+                        <div class="w-2.5 h-2.5 bg-slate-900 border-r border-b border-slate-700 transform rotate-45 absolute left-6 -bottom-1.5"></div>
+                      </div>
+                    </div>
+                    <span class="font-bold text-[#0f172a] text-sm">Japanese & Chinese Template Formality Nuances</span>
+                    <span class="text-xs text-slate-500 font-medium">(18 Mentions)</span>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    <strong>Symptom:</strong> Japanese and Chinese sellers spend 4-6 minutes manually editing auto-generated email snippets to make tone appropriately formal (e.g. Japanese Keigo and Chinese business etiquette) for regional hotel executives.
+                  </p>
+                  <div class="text-[11px] text-slate-500">
+                    <em>Root Cause:</em> System prompt was trained on US colloquial business phrasing, lacking regional honorific nuance; directly causing APAC adoption to fall by -8% WoW.
+                  </div>
+                </div>
+                <div class="flex-shrink-0 text-right">
+                  <div class="text-lg font-black text-amber-700">-18% Velocity</div>
+                  <span class="text-[10px] text-slate-500 block">Email Follow-Up Drag</span>
+                </div>
+              </div>
+
+              <!-- Rank 3: Medium -->
+              <div class="p-4 rounded-xl bg-white border-2 border-blue-200 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <div class="relative inline-block group">
+                      <span tabindex="0" class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-800 font-black text-xs uppercase cursor-pointer transition shadow-2xs border border-blue-200">
+                        <span>Tier 3 · R.I.C.E. Score: 8 · Medium</span>
+                        <i class="fa-solid fa-circle-question text-[11px] text-blue-800"></i>
+                      </span>
+
+                      <!-- Interactive Tooltip -->
+                      <div class="absolute left-0 bottom-full mb-2 hidden group-hover:block group-focus:block z-50 w-72 sm:w-80 p-3.5 rounded-xl bg-slate-900 text-white text-[11px] leading-relaxed shadow-2xl border border-slate-700 pointer-events-none">
+                        <div class="font-bold text-[#f2994a] text-xs pb-1.5 border-b border-slate-700 flex items-center justify-between">
+                          <span>R.I.C.E. Calculation Breakdown</span>
+                          <span class="text-[10px] font-mono text-blue-400 font-bold">Score: 8</span>
+                        </div>
+                        <div class="space-y-1 pt-1.5 text-slate-200">
+                          <div><strong>• Reach (R):</strong> 25 sellers (reps logging calls on mobile devices)</div>
+                          <div><strong>• Impact (I):</strong> 1.0 (Medium impact · calls log via batch; delayed, not lost)</div>
+                          <div><strong>• Confidence (C):</strong> 0.8 (80% · 12 verified mentions from mobile users)</div>
+                          <div><strong>• Effort (E):</strong> 2.5 person-weeks</div>
+                          <div class="p-2 rounded bg-slate-800 font-mono text-[10.5px] text-blue-300 mt-1 leading-snug">
+                            Formula: (Reach × Impact × Confidence) ÷ Effort<br>
+                            Math: (25 × 1.0 × 0.8) ÷ 2.5 = <strong>8</strong> (Rank #3 Deferred to Sprint 4)
+                          </div>
+                        </div>
+                        <div class="w-2.5 h-2.5 bg-slate-900 border-r border-b border-slate-700 transform rotate-45 absolute left-6 -bottom-1.5"></div>
+                      </div>
+                    </div>
+                    <span class="font-bold text-[#0f172a] text-sm">Mobile CRM Auto-Sync Webhook Latency</span>
+                    <span class="text-xs text-slate-500 font-medium">(12 Mentions)</span>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    <strong>Symptom:</strong> Calls completed on mobile devices experience 10-15 minute batch delays before reflecting in Salesforce task histories.
+                  </p>
+                  <div class="text-[11px] text-slate-500">
+                    <em>Root Cause:</em> 15-minute polling interval on mobile webhook endpoints.
+                  </div>
+                </div>
+                <div class="flex-shrink-0 text-right">
+                  <div class="text-lg font-black text-blue-700">-11% Velocity</div>
+                  <span class="text-[10px] text-slate-500 block">Task Logging Verification Drag</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- SLIDE 3 CONTAINER: EXECUTIVE & STAKEHOLDER SIGN-OFF -->
+          <div id="sync-slide-3" class="sync-slide-content hidden space-y-6">
+            <div>
+              <span class="text-xs font-black uppercase tracking-wider text-[#ea580c] block">Slide 3 · Roadmap Priorities & Estimated Timelines</span>
+              <h4 class="text-xl font-extrabold text-[#1a365d] mt-1">
+                Top Priority Product Solutions on Roadmap & Stakeholder Sign-Off
+              </h4>
+              <p class="text-xs text-[#334155] mt-1">
+                Evaluated by Sales AI Engineer Thomas on Value vs. Effort with estimated timelines for completion.
+              </p>
+            </div>
+
+            <!-- 3 Engineering Priority Cards with Stakeholder Sign-Off Badges -->
+            <div class="space-y-3.5">
+              
+              <!-- Priority 1: APPROVED -->
+              <div class="p-4 rounded-xl bg-white border-2 border-emerald-500 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <span class="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-black text-xs uppercase">
+                      Priority 01 · High Value vs. Moderate Effort
+                    </span>
+                    <strong class="font-extrabold text-[#0f172a] text-sm">Fix 1-Click Calling Button & WebRTC Softphone Dialer Bridge</strong>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    Patch browser dialer protocol handler and WebRTC event listener to restore reliable 1-click calling directly in Maverick. Eliminates the -32% calling blitz velocity drag.
+                  </p>
+                  <div class="text-[11px] text-slate-600 font-medium">
+                    <em>Estimated Timeline:</em> 1-2 Weeks (Hotfix in Sprint 3 / Week 7) · High Feasibility.
+                  </div>
+                </div>
+                <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span class="px-3 py-1 rounded-xl bg-emerald-100 text-emerald-800 text-xs font-extrabold flex items-center gap-1.5 shadow-2xs">
+                    <i class="fa-solid fa-check"></i> Stakeholders: Approved
+                  </span>
+                  <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Committed to Sprint 3</span>
+                </div>
+              </div>
+
+              <!-- Priority 2: APPROVED -->
+              <div class="p-4 rounded-xl bg-white border-2 border-emerald-500 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <span class="px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-800 font-black text-xs uppercase">
+                      Priority 02 · High Value vs. Low Effort
+                    </span>
+                    <strong class="font-extrabold text-[#0f172a] text-sm">Native Japanese & Chinese Culturally-Tuned Outreach Templates</strong>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    Deploy localized system prompts incorporating Japanese business Keigo and Chinese professional etiquette certified by APAC regional leadership. Saves 4-6 mins/email and reverses the -8% APAC adoption drop.
+                  </p>
+                  <div class="text-[11px] text-slate-600 font-medium">
+                    <em>Estimated Timeline:</em> 1 Week (Delivers in Sprint 3 / Week 7) · Prompt Engineering.
+                  </div>
+                </div>
+                <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span class="px-3 py-1 rounded-xl bg-emerald-100 text-emerald-800 text-xs font-extrabold flex items-center gap-1.5 shadow-2xs">
+                    <i class="fa-solid fa-check"></i> Stakeholders: Approved
+                  </span>
+                  <span class="text-[10px] font-bold text-emerald-700 uppercase tracking-wider">Committed to Sprint 3</span>
+                </div>
+              </div>
+
+              <!-- Priority 3: DEFERRED -->
+              <div class="p-4 rounded-xl bg-white border-2 border-slate-300 shadow-2xs flex flex-col md:flex-row md:items-center md:justify-between gap-4 opacity-85">
+                <div class="space-y-1 flex-grow">
+                  <div class="flex items-center space-x-2">
+                    <span class="px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 font-black text-xs uppercase">
+                      Priority 03 · Moderate Value vs. High Effort
+                    </span>
+                    <strong class="font-extrabold text-[#0f172a] text-sm">Real-Time Bi-Directional Salesforce Mobile Webhook Sync</strong>
+                  </div>
+                  <p class="text-xs text-[#334155] leading-relaxed">
+                    Rewrite webhook ingestion engine to reduce mobile sync latency from 15 mins to under 30 seconds.
+                  </p>
+                  <div class="text-[11px] text-amber-800 font-medium">
+                    <em>Estimated Timeline:</em> 3-4 Weeks · Deferred to preserve engineering capacity for top data quality items.
+                  </div>
+                </div>
+                <div class="flex flex-col items-end gap-1 flex-shrink-0">
+                  <span class="px-3 py-1 rounded-xl bg-amber-100 text-amber-900 text-xs font-extrabold flex items-center gap-1.5 shadow-2xs">
+                    <i class="fa-solid fa-clock"></i> Stakeholders: Deferred
+                  </span>
+                  <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Staged for Sprint 4</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Slide Footer Status -->
+          <div class="pt-4 border-t border-[#cbd5e1]/60 flex flex-wrap items-center justify-between text-xs text-slate-500">
+            <span class="font-medium">
+              <i class="fa-solid fa-circle-info text-[#f2994a] mr-1"></i> Standardized format presented by GTM Specialist every other Thursday.
+            </span>
+            <span class="font-bold text-[#1a365d]">
+              Meeting Driver: Sarah Manning (GTM Productivity Specialist)
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
@@ -2834,7 +4032,7 @@
 
     // 2. MAIN TAB SWITCHING
     function switchMainTab(tabId) {
-      const views = ['deck', 'manager', 'announcement', 'exec'];
+      const views = ['deck', 'manager', 'announcement', 'exec', 'coaching'];
       views.forEach(v => {
         const section = document.getElementById(`view-${v}`);
         const btn = document.getElementById(`tab-btn-${v}`);
@@ -3064,7 +4262,79 @@
       }, 3500);
     }
 
+
+    // 7. PERFORMANCE COACHING & SYNC SLIDE VIEWER LOGIC
+    let currentSyncSlide = 1;
+    const totalSyncSlides = 3;
+
+    function goToSyncSlide(slideNum) {
+      currentSyncSlide = slideNum;
+      for (let i = 1; i <= totalSyncSlides; i++) {
+        const slideEl = document.getElementById(`sync-slide-${i}`);
+        const tabEl = document.getElementById(`sync-tab-${i}`);
+        if (slideEl && tabEl) {
+          if (i === slideNum) {
+            slideEl.classList.remove('hidden');
+            tabEl.className = "px-3 py-1.5 rounded-lg text-xs font-bold bg-[#1a365d] text-white transition cursor-pointer";
+          } else {
+            slideEl.classList.add('hidden');
+            tabEl.className = "px-3 py-1.5 rounded-lg text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer";
+          }
+        }
+      }
+
+      const badgeTitles = [
+        "SLIDE 01 · ADOPTION & BEHAVIORAL REPLICATION",
+        "SLIDE 02 · WORKFLOW FRICTION & VELOCITY DRAG",
+        "SLIDE 03 · ENGINEERING COMMITMENTS & SIGN-OFF"
+      ];
+
+      const badgeEl = document.getElementById('sync-slide-title-badge');
+      if (badgeEl) badgeEl.textContent = badgeTitles[slideNum - 1];
+
+      const counterEl = document.getElementById('sync-slide-counter');
+      if (counterEl) counterEl.textContent = `Slide ${slideNum} of ${totalSyncSlides}`;
+
+      const btnPrev = document.getElementById('btn-sync-prev');
+      const btnNext = document.getElementById('btn-sync-next');
+      if (btnPrev) btnPrev.disabled = (slideNum === 1);
+      if (btnNext) btnNext.disabled = (slideNum === totalSyncSlides);
+    }
+
+    function nextSyncSlide() {
+      if (currentSyncSlide < totalSyncSlides) goToSyncSlide(currentSyncSlide + 1);
+    }
+
+    function prevSyncSlide() {
+      if (currentSyncSlide > 1) goToSyncSlide(currentSyncSlide - 1);
+    }
+
+    function scrollToCoachingSection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    function updateSOPChecklist() {
+      const checkboxes = document.querySelectorAll('.sop-checkbox');
+      let checkedCount = 0;
+      checkboxes.forEach(cb => {
+        if (cb.checked) checkedCount++;
+      });
+      const badge = document.getElementById('sop-checklist-counter');
+      if (badge) {
+        badge.textContent = `${checkedCount} of ${checkboxes.length} Steps Completed`;
+        if (checkedCount === checkboxes.length) {
+          badge.className = "px-3 py-1 rounded-full bg-emerald-600 text-white text-xs font-bold self-start sm:self-auto";
+        } else {
+          badge.className = "px-3 py-1 rounded-full bg-[#1a365d] text-white text-xs font-bold self-start sm:self-auto";
+        }
+      }
+    }
+
     window.onload = function() {
+      goToSyncSlide(1);
       goToSlide(1);
       renderSurveyDashboard();
       verifyWordCount();
